@@ -48,5 +48,5 @@ class Hero {
 };
 
 //tbd - hero classes - basic (with counterattack), pushing, strikethrough, shielding, dodging, jumping
-
+//to be defined - hero generation and death, maybe status effect
 void BasicClass(Hero* hero1, Hero* hero2, bool IsAttacking);
