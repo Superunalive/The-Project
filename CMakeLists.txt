@@ -1,10 +1,13 @@
 cmake_minimum_required(VERSION 3.16) 
- set(project_name "Practika PKSH")
+ set(project_name "Practika_PKSH")
 
 project(${project_name} LANGUAGES CXX)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
+
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/_deps/sfml-scr/include)
+link_directories(${CMAKE_CURRENT_BINARY_DIR}/_deps/sfml-build/lib)
 
 include(FetchContent)
 FetchContent_Declare(SFML
@@ -13,7 +16,7 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 add_executable(${project_name} main.cpp)
-//add_subdirectory(libraries) 
+#add_subdirectory(libraries) 
 target_link_libraries(${project_name} sfml-graphics)
 target_compile_features(${project_name} PRIVATE cxx_std_17)
 

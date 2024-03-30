@@ -33,7 +33,7 @@ CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//No help, variable specified on the command line.
+//Choose the type of build (Debug or Release)
 CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
@@ -206,7 +206,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Practika PKSH
+CMAKE_PROJECT_NAME:STATIC=Practika_PKSH
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -412,6 +412,24 @@ Practika PKSH_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Practika PKSH_SOURCE_DIR:STATIC=/Users/sonyaryabova/cpp2/The-Project
+
+//Value Computed by CMake
+PractikaPKSH_BINARY_DIR:STATIC=/Users/sonyaryabova/cpp2/The-Project/build
+
+//Value Computed by CMake
+PractikaPKSH_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+PractikaPKSH_SOURCE_DIR:STATIC=/Users/sonyaryabova/cpp2/The-Project
+
+//Value Computed by CMake
+Practika_PKSH_BINARY_DIR:STATIC=/Users/sonyaryabova/cpp2/The-Project/build
+
+//Value Computed by CMake
+Practika_PKSH_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Practika_PKSH_SOURCE_DIR:STATIC=/Users/sonyaryabova/cpp2/The-Project
 
 //Value Computed by CMake
 SFML_BINARY_DIR:STATIC=/Users/sonyaryabova/cpp2/The-Project/build/_deps/sfml-build
@@ -623,7 +641,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
