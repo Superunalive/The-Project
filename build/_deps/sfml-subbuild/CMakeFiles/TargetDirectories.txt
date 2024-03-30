@@ -1,0 +1,3 @@
+/Users/sonyaryabova/cpp2/The-Project/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate.dir
+/Users/sonyaryabova/cpp2/The-Project/build/_deps/sfml-subbuild/CMakeFiles/edit_cache.dir
+/Users/sonyaryabova/cpp2/The-Project/build/_deps/sfml-subbuild/CMakeFiles/rebuild_cache.dir
