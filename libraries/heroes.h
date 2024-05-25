@@ -8,6 +8,19 @@ class Hero {
     int behaviour_; //corresponds to an ability function
     int modifier_; //placeholder for ability strength-defining number
     public:
+    Hero(){
+    chealth_, mhealth_, damage, mana_suck_ = 0;
+    modifier_ = 1;
+    }
+    Hero(&Hero other){
+        (*this).SetName(other.name_);
+        (*this).SetCurrentHealth(other.mhealth_);
+        (*this).SetMaxHealth(other.chealth_);
+        (*this).SetDamage(other.damage_);
+        (*this).SetManaSuck(other.mana_suck_);
+        (*this).SetBehaviour(other.behaviour_);
+        (*this).SetModifier(other.modifier_);
+    }
     char* GetName(){
         return name_;
     }
