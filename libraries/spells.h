@@ -1,6 +1,6 @@
 #ifndef SPELL_H
 #define SPELL_H
-
+/*
 class Spell{
     char name_[20]; //no comment
     int mana_; //mana cost
@@ -43,6 +43,6 @@ class Spell{
         this->behaviour_ = behaviour;
     }
 };
-
+*/
 //tbd - types of spells (for now - AOE damage and heal, single-target damage and heal, move hero, inflict status effect/ailment)
 #endif

@@ -82,12 +82,21 @@ int main()
     Hero * lol6 = &Anto3;
     Hero * lol7 = &Proto4;
     Hero * lol8 = &Anto4;
-    std::vector<int> x1 = {2,3,1,3};
-    std::vector<int> x2 = {2,4,0,2};
-    std::vector<int> y1 = {3,1,1,0};
-    std::vector<int> y2 = {4,2,4,0};
+    std::vector<int> x1 = {};
+    std::vector<int> x2 = {};
+    std::vector<int> y1 = {};
+    std::vector<int> y2 = {};
     int* x = new int[8] {2,2,3,4,1,0,3,2};
     int* y = new int[8] {3,4,1,2,1,4,0,0};
+    action::hero_spawn(board, nx, ny, lol1 , 1, x1, y1);
+    action::hero_spawn(board, nx, ny, lol2 , 2, x2, y2);
+    action::hero_spawn(board, nx, ny, lol3 , 1, x1, y1);
+    action::hero_spawn(board, nx, ny, lol4 , 2, x2, y2);
+    action::hero_spawn(board, nx, ny, lol5 , 1, x1, y1);
+    action::hero_spawn(board, nx, ny, lol6 , 2, x2, y2);
+    action::hero_spawn(board, nx, ny, lol7 , 1, x1, y1);
+    action::hero_spawn(board, nx, ny, lol8 , 2, x2, y2);
+    /*
     for (int i = 0; i<8; i++){
         if (i%2==0){
             board[x[i]][y[i]].IsBusy = true;
@@ -106,31 +115,42 @@ int main()
     board[x[5]][y[5]].hero = lol6;
     board[x[6]][y[6]].hero = lol7;
     board[x[7]][y[7]].hero = lol8;
-    
+    */
     int kills_one = 0;
     int kills_two = 0;
     
     int turn = 1;
+    int side = 2;
     char l = 'h';
     while (l!='q'){
+        std::cout << x1.size();
         std:: cout << "Номера героев:   ";
-        for (int i = 0; i<7; i+=2){
-            std::cout << (i/2) << ")" << x[i] << " " << y[i] << "  ";
+        for (int i = 0; i<x1.size(); i+=1){
+            std::cout << i << ")" << x1[i] << " " << y1[i] << "  ";
         }
-        for (int i = 1; i<8; i+=2){
-            std::cout << ((i-1)/2) << ")" << x[i] << " " << y[i] << "  ";
+        for (int i = 0; i<x2.size(); i+=1){
+            std::cout << i << ")" << x2[i] << " " << y2[i] << "  ";
         }
         std::cout << std::endl;
         if ((l=='0')||(l=='1')||(l=='2')||(l=='3')){
-            turn = (turn%2)+2*((int)l-48);
+            turn = (int)l-48;
         }
         else{
-            action::behaviour(x[turn], y[turn], board, nx, ny,l);
-            action::death_check(board,nx,ny,kills_one,kills_two);
+            if (side==1){
+                action::behaviour(x1[turn], y1[turn], board, nx, ny,l);
+                action::death_check(board,nx,ny,kills_one,kills_two,x1,y1,x2,y2);
+                side = 2;
+            }
+            else {
+                action::behaviour(x2[turn], y2[turn], board, nx, ny,l);
+                action::death_check(board,nx,ny,kills_one,kills_two,x1,y1,x2,y2);
+                side = 1;
+            }
             action::board_output(board,nx,ny); // На этом моменте обновлять доску
-            turn = (turn+1)%2;
+            turn = 0;
+            
         }
-        std::cout<<"Сторона: "<< (turn)%2+1 << "  Выбран Герой под номером " << turn/2 << "   " << kills_one << ":"  << kills_two << std::endl;
+        std::cout<<"Сторона: "<< side << "  Выбран Герой под номером " << turn << "   " << kills_one << ":"  << kills_two << std::endl;
         std::cin >> l;
         if (kills_one>=4){
             std::cout << "Победил игрок 1;  Уничтожено героев игроком 1: " << kills_one << " Уничтожено героев игроком 2: " << kills_two << std::endl;

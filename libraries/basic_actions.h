@@ -2,6 +2,7 @@
 #define BASIC_ACTIONS_H
 
 #include "board.h"
+#include <vector>
 // type - таблица сторон объектов; hp - таблица здоровья
 
 namespace without {
@@ -44,9 +45,11 @@ void change_pos(int&, int&, int, int, Cell**); // два объекта меня
 
 void counter_attack(int, int, Cell**, int, int, char); // контратака
 
-void death_check(Cell**, int, int, int&, int&); // у кого 0 хп
+void death_check(Cell**, int, int, int&, int&, std::vector<int>& x1,std::vector<int>& y1,std::vector<int>& x2,std::vector<int>& y2); // у кого 0 хп
 
 void board_output(Cell**, int, int); // 1 вид вывода доски
+
+void hero_spawn(Cell** board, int nx, int ny, Hero* hero, int side, std::vector<int>& x, std::vector<int>& y); // добавление героя на нужное место строки
 
 }
 
