@@ -1,6 +1,7 @@
 #ifndef SPELL_H
 #define SPELL_H
-#include <cstring> /*
+/*
+#include <cstring> 
 class Spell{
     char *name_; //no comment
     int mana_; //mana cost

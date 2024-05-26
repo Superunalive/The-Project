@@ -1,6 +1,8 @@
 #ifndef HERO_H
 #define HERO_H
 #include <cstring>
+#include <iostream>
+#include <fstream>
 class Hero {
     char *name_;
     int chealth_;
@@ -10,20 +12,17 @@ class Hero {
     int behaviour_; //corresponds to an ability function
     int modifier_; //placeholder for ability strength-defining number
     public:
+
     Hero(){
         name_ = new char[20];
         chealth_, mhealth_, damage_, mana_suck_ = 0;
         modifier_ = 1;
     }
     Hero(Hero &other){
-        (*this).SetName(other.name_);
-        (*this).SetCurrentHealth(other.mhealth_);
-        (*this).SetMaxHealth(other.chealth_);
-        (*this).SetDamage(other.damage_);
-        (*this).SetManaSuck(other.mana_suck_);
-        (*this).SetBehaviour(other.behaviour_);
-        (*this).SetModifier(other.modifier_);
+        (*this).name_ = new char[20];
+        *this = other;
     }
+    
     char* GetName(){
         return name_;
     }
@@ -44,6 +43,16 @@ class Hero {
     }
     int GetModifier(){
         return modifier_;
+    }
+
+    void Set(char *name, int health, int damage, int mana_suck, int behaviour, int modifier){
+        (*this).SetName(name);
+        (*this).SetCurrentHealth(health);
+        (*this).SetMaxHealth(health);
+        (*this).SetDamage(damage);
+        (*this).SetManaSuck(mana_suck);
+        (*this).SetBehaviour(behaviour);
+        (*this).SetModifier(modifier);
     }
     void SetName(char *name){
         strcpy(name_, name);
@@ -66,13 +75,20 @@ class Hero {
     void SetModifier(int modifier){
         this->modifier_ = modifier;
     }
+    
     ~Hero(){
         delete [] name_;
     }
+
+    Hero &operator=(Hero & other){
+        if (this == &other){
+            return *this;
+        }
+        (*this).Set(other.name_, other.mhealth_, other.damage_, other.mana_suck_, other.behaviour_, other.modifier_);
+        return *this;
+    }
+    friend std::ifstream &operator>>(std::ifstream&, Hero&);
 };
 
-//tbd - hero classes - basic (with counterattack), pushing, strikethrough, shielding, dodging, jumping
-//to be defined - hero generation and death, maybe status effect
-void BasicClass(Hero* hero1, Hero* hero2, bool IsAttacking);
 
 #endif

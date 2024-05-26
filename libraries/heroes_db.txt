@@ -1,0 +1,13 @@
+6
+Warrior
+50 12 2 1 1
+Barbarian
+35 10 3 1 1
+Knight
+50 8 1 2 1
+HeavyKnight
+60 5 0 2 3
+Archer
+40 10 2 3 2
+Thief
+30 10 3 4 1
