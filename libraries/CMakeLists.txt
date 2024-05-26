@@ -6,7 +6,7 @@ project(${project})
 set(CMAKE_CXX_STANDARD 17)
 
 set(${project}_SOURCES
-        h&s.cpp 
+        heroes.cpp 
         behaviour.cpp
         basic_actions.cpp)
 
