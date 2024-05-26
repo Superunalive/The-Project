@@ -1,5 +1,7 @@
 #include <iostream>
 #include "basic_actions.h"
+#include <ctime>
+
 
 // type - таблица сторон объектов; hp - таблица здоровья
 
@@ -220,15 +222,27 @@ void counter_attack(int x, int y, Cell** board, int nx, int ny, char l){
     }
 }
 
-void death_check(Cell** board, int nx, int ny, int& kills_one, int& kills_two){
+void death_check(Cell** board, int nx, int ny, int& kills_one, int& kills_two, std::vector<int>& x1,std::vector<int>& y1,std::vector<int>& x2,std::vector<int>& y2){
     for (int i = 0; i<nx; i++){
         for (int j = 0; j<ny; j++){
             if ((board[i][j].GetCurrentHealth()<=0)&&(board[i][j].IsBusy)){
                 if (board[i][j].side==1){
                     kills_one+=1;
+                    for (int k = 0; k < x1.size(); k++){
+                        if ((x1[i]==i)&&(y1[i]==j)){
+                            x1.erase(x1.begin()+i);
+                            y1.erase(y1.begin()+i);
+                        }
+                    }
                 }
                 else{
                     kills_two+=1;
+                    for (int k = 0; k < x2.size(); k++){
+                        if ((x2[i]==i)&&(y2[i]==j)){
+                            x2.erase(x2.begin()+i);
+                            y2.erase(y2.begin()+i);
+                        }
+                    }
                 }
                 board[i][j].side = 0;
                 board[i][j].hero = nullptr;
@@ -248,6 +262,23 @@ void board_output(Cell** board, int nx, int ny){ // 1 вид вывода дос
             std::cout << board[i][j].GetCurrentHealth() << " ";
         }
         std::cout << std::endl;
+    }
+}
+
+void hero_spawn(Cell** board, int nx, int ny, Hero* hero, int side, std::vector<int>& x, std::vector<int>& y){
+    srand(time(NULL));
+    int k = 1;
+    while (k==1){
+    int px = rand()%nx;
+    int py = rand()%ny;
+    if (board[px][py].IsBusy==0){
+        k = 0;
+        board[px][py].IsBusy = true;
+        board[px][py].side= side;
+        board[px][py].hero = hero;
+        x.push_back(px);
+        y.push_back(py);
+    }  
     }
 }
 }

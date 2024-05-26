@@ -1,6 +1,6 @@
 #ifndef SPELL_H
 #define SPELL_H
-#include <cstring> 
+#include <cstring> /*
 class Spell{
     char *name_; //no comment
     int mana_; //mana cost
@@ -46,6 +46,6 @@ class Spell{
         delete [] name_;
     }
 };
-
+*/
 //tbd - types of spells (for now - AOE damage and heal, single-target damage and heal, move hero, inflict status effect/ailment)
 #endif

@@ -30,4 +30,6 @@ struct Cell{
         return hero->GetBehaviour();
     }
 };
+
+
 #endif
