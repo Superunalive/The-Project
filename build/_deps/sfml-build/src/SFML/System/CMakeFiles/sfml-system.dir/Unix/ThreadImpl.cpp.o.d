@@ -52,92 +52,13 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/qos.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_mach_port_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_sigset_t.h \
-  /Users/sonyaryabova/cpp2/The-Project/build/_deps/sfml-src/include/SFML/System/Thread.hpp \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstdlib \
+  /Users/sonyaryabova/cpp2/The-Project/build/_deps/sfml-src/include/SFML/System/Err.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__config_site \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__verbose_abort \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__availability \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdlib.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/stdlib.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/wait.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_pid_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_id_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/signal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/appleapiopts.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/machine/signal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/i386/signal.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/machine/_mcontext.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/i386/_mcontext.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/mach/machine/_structs.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/mach/i386/_structs.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_sigaltstack.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_ucontext.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_uid_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/resource.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdint.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/stdint.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint8_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint16_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint32_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint64_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_intmax_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_uintmax_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_timeval.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/machine/endian.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/i386/endian.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_endian.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/libkern/_OSByteOrder.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/libkern/i386/_OSByteOrder.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/alloca.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_ct_rune_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_rune_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_wchar_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/malloc/_malloc.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/malloc/_malloc_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_dev_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/sonyaryabova/cpp2/The-Project/build/_deps/sfml-src/include/SFML/System/Thread.inl \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/version \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ios \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ios/fpos.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iosfwd \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__fwd/string.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__fwd/memory_resource.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__mbstate_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/wchar.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stddef.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/wchar.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_mbstate_t.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdarg.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_va_list.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/stdio.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_seek_set.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_ctermid.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_off_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_ssize_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/__wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_wint_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_wctype_t.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_ctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/runetype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__locale \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cctype \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstdint \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/locale.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/locale.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_locale.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/shared_ptr.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/compare_three_way.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/three_way_comparable.h \
@@ -151,6 +72,9 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_cv.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_const.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_volatile.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/version \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/common_reference_with.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__concepts/convertible_to.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_convertible.h \
@@ -209,6 +133,47 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_constructible.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_constructible.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/new \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstdlib \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdlib.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/stdlib.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/wait.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_pid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_id_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/appleapiopts.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/machine/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/i386/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/machine/_mcontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/i386/_mcontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/mach/machine/_structs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/mach/i386/_structs.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_sigaltstack.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_ucontext.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_uid_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/resource.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdint.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/stdint.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint8_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint16_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint32_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_uint64_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_intmax_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_uintmax_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_timeval.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/machine/endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/i386/endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_endian.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/libkern/_OSByteOrder.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/libkern/i386/_OSByteOrder.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/alloca.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_ct_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_wchar_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/malloc/_malloc.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/malloc/_malloc_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_dev_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_mode_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/exception \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_class.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/is_final.h \
@@ -290,12 +255,38 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_pointer.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/result_of.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/type_identity.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/pointer_traits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/limits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__undef_macros \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/allocator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/allocate_at_least.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdexcept \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iosfwd \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__fwd/string.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__fwd/memory_resource.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__mbstate_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/wchar.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/wchar.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_mbstate_t.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdarg.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_va_list.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/stdio.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_seek_set.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_ctermid.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_off_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_ssize_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/__wctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/sys/_types/_wint_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_wctype_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_ctype.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/runetype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/allocator_destructor.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/auto_ptr.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/compressed_pair.h \
@@ -431,10 +422,14 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/compare_strong_order_fallback.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/compare_weak_order_fallback.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__compare/is_eq.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__mutex_base \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/system_error \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__errc \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cerrno \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/bitset \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/fill.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/fill_n.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit_reference \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/copy_n.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/countr.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/rotate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/popcount.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/max_element.h \
@@ -443,6 +438,7 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/find_if.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/remove_if.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__format/enable_insertable.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__ios/fpos.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__iterator/wrap_iter.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/swap_allocator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h \
@@ -458,14 +454,13 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__utility/rel_ops.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__utility/to_underlying.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__string/char_traits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/copy_n.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/fill_n.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/find_end.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/search.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/find_first_of.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstdio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cwchar \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cwctype \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cctype \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/wctype.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_wctrans_t.h \
@@ -493,7 +488,6 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/equal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/equal_range.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/upper_bound.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/fill.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/find_if_not.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/for_each.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/for_each_n.h \
@@ -540,16 +534,13 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/bit \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/bit_ceil.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/countl.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/rotate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/bit_floor.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/bit_log2.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/bit_width.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/blsr.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/byteswap.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/countr.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/endian.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/has_single_bit.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit/popcount.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/partial_sort_copy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/make_projected.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/partition.h \
@@ -737,7 +728,6 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__node_handle \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/vector \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__format/formatter.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__split_buffer \
@@ -752,6 +742,16 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional/unary_negate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ios \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__locale \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/locale.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/locale.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_locale.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/mutex \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__mutex_base \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/system_error \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__errc \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cerrno \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_xlocale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/xlocale/_ctype.h \
@@ -762,9 +762,6 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/xlocale/_time.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/xlocale/_wchar.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/xlocale/_wctype.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/istream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/ostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/streambuf \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/nl_types.h \
@@ -796,5 +793,9 @@ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Unix/ThreadImpl.cpp.
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstdarg \
+  /Users/sonyaryabova/cpp2/The-Project/build/_deps/sfml-src/include/SFML/System/Thread.hpp \
+  /Users/sonyaryabova/cpp2/The-Project/build/_deps/sfml-src/include/SFML/System/Thread.inl \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/iostream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/assert.h
