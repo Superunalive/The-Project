@@ -153,10 +153,12 @@ int main()
         std::cout<<"Сторона: "<< side << "  Выбран Герой под номером " << turn << "   " << kills_one << ":"  << kills_two << std::endl;
         std::cin >> l;
         if (kills_one>=4){
+            action::board_output(board,nx,ny);
             std::cout << "Победил игрок 1;  Уничтожено героев игроком 1: " << kills_one << " Уничтожено героев игроком 2: " << kills_two << std::endl;
             break;
         }
         if (kills_two>=4){
+            action::board_output(board,nx,ny);
             std::cout << "Победил игрок 2;  Уничтожено героев игроком 1: " << kills_one << " Уничтожено героев игроком 2: " << kills_two << std::endl;
             break;
         }
