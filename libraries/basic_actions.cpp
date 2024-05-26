@@ -252,7 +252,7 @@ void death_check(Cell** board, int nx, int ny, int& kills_one, int& kills_two, s
     }
 }
 
-void board_output(Cell** board, int nx, int ny){ // 1 вид вывода доски
+void board_output(Cell** board, int nx, int ny, int x1, int y1){ // 1 вид вывода доски
     for (int i =0; i<nx; i++){
         for (int j = 0; j<5; j++){
             std::cout << board[i][j].side << " ";

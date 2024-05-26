@@ -140,26 +140,29 @@ int main()
             if (side==1){
                 action::behaviour(x1[turn], y1[turn], board, nx, ny,l);
                 action::death_check(board,nx,ny,kills_one,kills_two,x1,y1,x2,y2);
+                //action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
                 side = 2;
             }
             else {
                 action::behaviour(x2[turn], y2[turn], board, nx, ny,l);
                 action::death_check(board,nx,ny,kills_one,kills_two,x1,y1,x2,y2);
+                //action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
+
                 side = 1;
             }
-            action::board_output(board,nx,ny); // На этом моменте обновлять доску
             turn = 0;
             
         }
         std::cout<<"Сторона: "<< side << "  Выбран Герой под номером " << turn << "   " << kills_one << ":"  << kills_two << std::endl;
+        action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
         std::cin >> l;
         if (kills_one>=4){
-            action::board_output(board,nx,ny);
+            action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
             std::cout << "Победил игрок 1;  Уничтожено героев игроком 1: " << kills_one << " Уничтожено героев игроком 2: " << kills_two << std::endl;
             break;
         }
         if (kills_two>=4){
-            action::board_output(board,nx,ny);
+            action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
             std::cout << "Победил игрок 2;  Уничтожено героев игроком 1: " << kills_one << " Уничтожено героев игроком 2: " << kills_two << std::endl;
             break;
         }
