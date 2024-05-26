@@ -16,8 +16,9 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 add_executable(${project_name} main.cpp)
-#add_subdirectory(libraries) 
+add_subdirectory(graphics) 
 target_link_libraries(${project_name} sfml-graphics)
+target_link_libraries(${project_name} graphics)
 target_compile_features(${project_name} PRIVATE cxx_std_17)
 
 if(WIN32)
