@@ -22,7 +22,6 @@ int main()
     #endif
     int nx = 5;
     int ny = 5;
-    
 
     Hero Proto1; 
     Proto1.SetBehaviour(1);
@@ -118,7 +117,6 @@ int main()
         for (int i = 0; i<7; i+=2){
             std::cout << (i/2) << ")" << x[i] << " " << y[i] << "  ";
         }
-        std::cout << std::endl;
         for (int i = 1; i<8; i+=2){
             std::cout << ((i-1)/2) << ")" << x[i] << " " << y[i] << "  ";
         }
@@ -127,12 +125,13 @@ int main()
             turn = (turn%2)+2*((int)l-48);
         }
         else{
+            std::cout << std::endl;
             action::behaviour(x[turn], y[turn], board, nx, ny,l);
             action::death_check(board,nx,ny,kills_one,kills_two);
             action::board_output(board,nx,ny); // На этом моменте обновлять доску
             turn = (turn+1)%2;
         }
-        std::cout<<"Сторона: "<< (turn+1)%2 << "  Выбран Герой под номером " << turn/2 << "   " << kills_one << ":"  << kills_two <<std::endl;
+        std::cout<<"Сторона: "<< (turn)%2+1 << "  Выбран Герой под номером " << turn/2 << "   " << kills_one << ":"  << kills_two << std::endl;
         std::cin >> l;
         if (kills_one>=4){
             std::cout << "Победил игрок 1;  Уничтожено героев игроком 1: " << kills_one << " Уничтожено героев игроком 2: " << kills_two << std::endl;
