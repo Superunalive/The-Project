@@ -1,3 +1,5 @@
+#ifndef SPELL_H
+#define SPELL_H
 
 class Spell{
     char name_[20]; //no comment
@@ -43,3 +45,4 @@ class Spell{
 };
 
 //tbd - types of spells (for now - AOE damage and heal, single-target damage and heal, move hero, inflict status effect/ailment)
+#endif

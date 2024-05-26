@@ -1,6 +1,8 @@
-
+#ifndef HERO_H
+#define HERO_H
+#include <cstring>
 class Hero {
-    char name_[20];
+    char *name_;
     int chealth_;
     int mhealth_;
     int damage_; //name, this and health are self-explanatory. c means current, m means maximum
@@ -9,8 +11,9 @@ class Hero {
     int modifier_; //placeholder for ability strength-defining number
     public:
     Hero(){
-    chealth_, mhealth_, damage_, mana_suck_ = 0;
-    modifier_ = 1;
+        name_ = new char[20];
+        chealth_, mhealth_, damage_, mana_suck_ = 0;
+        modifier_ = 1;
     }
     Hero(Hero &other){
         (*this).SetName(other.name_);
@@ -42,8 +45,8 @@ class Hero {
     int GetModifier(){
         return modifier_;
     }
-    void SetName(const char *name){
-        this->name_ = name;
+    void SetName(char *name){
+        strcpy(name_, name);
     }
     void SetCurrentHealth(int health){
         this->chealth_ = health;
@@ -68,3 +71,5 @@ class Hero {
 //tbd - hero classes - basic (with counterattack), pushing, strikethrough, shielding, dodging, jumping
 //to be defined - hero generation and death, maybe status effect
 void BasicClass(Hero* hero1, Hero* hero2, bool IsAttacking);
+
+#endif

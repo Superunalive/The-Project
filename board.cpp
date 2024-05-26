@@ -122,6 +122,7 @@ int main()
         for (int i = 1; i<8; i+=2){
             std::cout << ((i-1)/2) << ")" << x[i] << " " << y[i] << "  ";
         }
+        std::cout << std::endl;
         if ((l=='0')||(l=='1')||(l=='2')||(l=='3')){
             turn = (turn%2)+2*((int)l-48);
         }

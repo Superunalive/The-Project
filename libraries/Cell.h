@@ -1,6 +1,6 @@
 #ifndef CELL_H
 #define CELL_H
-#include "Hero.h"
+#include "heroes.h"
 
 class Cell{
     int fraction_;
@@ -9,7 +9,7 @@ class Cell{
     public:
     Cell() {hero_ = nullptr;}
     Cell(Cell &other) { //should I copy heroes as well?
-      this->fraction_ = other.fraction;
+      this->fraction_ = other.fraction_;
       this->status_ = other.status_;
     }
     void SetFraction(int fraction);
@@ -20,4 +20,6 @@ class Cell{
     int GetStatus();
     Hero GetHero();
     
-}
+};
+
+#endif
