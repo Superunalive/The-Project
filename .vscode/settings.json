@@ -172,5 +172,10 @@
       "thread": "cpp",
       "typeindex": "cpp",
       "valarray": "cpp"
-  }
+  },
+  "cSpell.words": [
+    "Anto",
+    "gamemode",
+    "hpos"
+  ]
   }

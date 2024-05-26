@@ -1,14 +1,14 @@
 #ifndef SPELL_H
 #define SPELL_H
-
+#include <cstring> 
 class Spell{
-    char name_[20]; //no comment
+    char *name_; //no comment
     int mana_; //mana cost
     int damage_; //how much damage. =0 deals no damage and <0 heals
     int behaviour_; //what else it does
     public:
     Spell(){
-        name_ = "placeholder";
+        name_ = new char[20];
         mana_, damage_ = 0;
         behaviour_ = 1;
     }
@@ -30,8 +30,8 @@ class Spell{
     int GetBehaviour(){
         return behaviour_;
     }
-    void SetName(const char* name){
-        this->name_ = name;
+    void SetName(char* name){
+        strcpy(name_, name);
     }
     void SetDamage(int damage){
         this->damage_ = damage;
@@ -41,6 +41,9 @@ class Spell{
     }
     void SetBehaviour(int behaviour){
         this->behaviour_ = behaviour;
+    }
+    ~Spell(){
+        delete [] name_;
     }
 };
 

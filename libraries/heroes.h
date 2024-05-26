@@ -66,6 +66,9 @@ class Hero {
     void SetModifier(int modifier){
         this->modifier_ = modifier;
     }
+    ~Hero(){
+        delete [] name_;
+    }
 };
 
 //tbd - hero classes - basic (with counterattack), pushing, strikethrough, shielding, dodging, jumping
