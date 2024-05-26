@@ -125,7 +125,6 @@ int main()
             turn = (turn%2)+2*((int)l-48);
         }
         else{
-            std::cout << std::endl;
             action::behaviour(x[turn], y[turn], board, nx, ny,l);
             action::death_check(board,nx,ny,kills_one,kills_two);
             action::board_output(board,nx,ny); // На этом моменте обновлять доску
