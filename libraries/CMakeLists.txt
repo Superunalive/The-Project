@@ -1,15 +1,20 @@
 cmake_minimum_required(VERSION 3.23)
 
-set(project "heroes and spells")
+set(project "libraries")
 project(${project})
 
 set(CMAKE_CXX_STANDARD 17)
 
 set(${project}_SOURCES
-        h&s.cpp)
+        h&s.cpp 
+        behaviour.cpp
+        basic_actions.cpp)
 
 set(${project}_HEADERS
-        heroes.h spells.h)
+        heroes.h 
+        spells.h 
+        behaviour.h 
+        basic_actions.h)
 
 set(${project}_SOURCE_LIST
         ${${project}_SOURCES}
