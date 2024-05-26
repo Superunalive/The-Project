@@ -11,82 +11,33 @@ class Hero {
     int mana_suck_; //placeholder name, how much mana player receives for dealing damage with this hero
     int behaviour_; //corresponds to an ability function
     int modifier_; //placeholder for ability strength-defining number
+    
     public:
 
-    Hero(){
-        name_ = new char[20];
-        chealth_, mhealth_, damage_, mana_suck_ = 0;
-        modifier_ = 1;
-    }
-    Hero(Hero &other){
-        (*this).name_ = new char[20];
-        *this = other;
-    }
+    Hero();
+    Hero(Hero &other);
     
-    char* GetName(){
-        return name_;
-    }
-    int GetCurrentHealth(){
-        return chealth_;
-    }
-    int GetMaxHealth(){
-        return mhealth_;
-    }
-    int GetDamage(){
-        return damage_;
-    }
-    int GetManaSuck(){
-        return mana_suck_;
-    }
-    int GetBehaviour(){
-        return behaviour_;
-    }
-    int GetModifier(){
-        return modifier_;
-    }
+    char* GetName();
+    int GetCurrentHealth();
+    int GetMaxHealth();
+    int GetDamage();
+    int GetManaSuck();
+    int GetBehaviour();
+    int GetModifier();
 
-    void Set(char *name, int health, int damage, int mana_suck, int behaviour, int modifier){
-        (*this).SetName(name);
-        (*this).SetCurrentHealth(health);
-        (*this).SetMaxHealth(health);
-        (*this).SetDamage(damage);
-        (*this).SetManaSuck(mana_suck);
-        (*this).SetBehaviour(behaviour);
-        (*this).SetModifier(modifier);
-    }
-    void SetName(char *name){
-        strcpy(name_, name);
-    }
-    void SetCurrentHealth(int health){
-        this->chealth_ = health;
-    }
-    void SetMaxHealth(int health){
-        this->mhealth_ = health;
-    }
-    void SetDamage(int damage){
-        this->damage_ = damage;
-    }
-    void SetManaSuck(int mana_suck){
-        this->mana_suck_ = mana_suck;
-    }
-    void SetBehaviour(int behaviour){
-        this->behaviour_ = behaviour;
-    }
-    void SetModifier(int modifier){
-        this->modifier_ = modifier;
-    }
+    void Set(char *name, int health, int damage, int mana_suck, int behaviour, int modifier);
+    void SetName(char *name);
+    void SetCurrentHealth(int health);
+    void SetMaxHealth(int health);
+    void SetDamage(int damage);
+    void SetManaSuck(int mana_suck);
+    void SetBehaviour(int behaviour);
+    void SetModifier(int modifier);
     
-    ~Hero(){
-        delete [] name_;
-    }
+    ~Hero();
 
-    Hero &operator=(Hero & other){
-        if (this == &other){
-            return *this;
-        }
-        (*this).Set(other.name_, other.mhealth_, other.damage_, other.mana_suck_, other.behaviour_, other.modifier_);
-        return *this;
-    }
+
+    Hero &operator=(Hero & other);
     friend std::ifstream &operator>>(std::ifstream&, Hero&);
 };
 
