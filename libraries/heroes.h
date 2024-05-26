@@ -9,7 +9,7 @@ class Hero {
     int modifier_; //placeholder for ability strength-defining number
     public:
     Hero(){
-    chealth_, mhealth_, damage, mana_suck_ = 0;
+    chealth_, mhealth_, damage_, mana_suck_ = 0;
     modifier_ = 1;
     }
     Hero(Hero &other){
@@ -43,7 +43,8 @@ class Hero {
         return modifier_;
     }
     void SetName(const char *name){
-        thus->name_ = name;
+        this->name_ = name;
+    }
     void SetCurrentHealth(int health){
         this->chealth_ = health;
     }
@@ -58,6 +59,9 @@ class Hero {
     }
     void SetBehaviour(int behaviour){
         this->behaviour_ = behaviour;
+    }
+    void SetModifier(int modifier){
+        this->modifier_ = modifier;
     }
 };
 
