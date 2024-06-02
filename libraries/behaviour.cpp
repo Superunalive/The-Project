@@ -95,6 +95,16 @@ void behaviour1(int& x, int& y, Cell** board, int nx, int ny, char l){ // обы
     counter_attack(x1,y1,board,nx,ny,l);
 }
 
+void behaviour2(int& x, int& y, Cell** board, int nx, int ny, char l){ // толкающий
+    int x1 = x;
+    int y1 = y;
+    step_pos(x1,y1,board,nx,ny,l);
+    change_pos(x,y,x1,y1,board);
+    damage(x1,y1,board,nx,ny,l);
+    counter_attack(x1,y1,board,nx,ny,l);
+    //не сделал
+}
+
 void behaviour3(int& x, int& y, Cell** board, int nx, int ny, char l){
     int x1 = x;
     int y1 = y;

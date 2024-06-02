@@ -1,12 +1,86 @@
 #include <iostream>
 #include <limits>
 #include <vector>
+#include <iomanip>
 #include "libraries/basic_actions.h"
 #include "libraries/behaviour.h"
 #include "libraries/board.h"
 #include "libraries/colors.h"
 #include "libraries/basic_actions.cpp"
 #include "libraries/behaviour.cpp"
+
+Colors color;
+
+void tileoutput(Cell** board, int x, int y, int n, int x1, int y1){ // n - строки от 0 до 5
+    if (board[x][y].IsBusy){
+        if (board[x][y].side==2){
+            color.set_color(CL_RED);
+            if ((x==x1)&&(y==y1)){
+                color.set_color(CL_YELLOW);
+            }
+        }
+        else{
+            color.set_color(CL_BLUE);
+            if ((x==x1)&&(y==y1)){
+                color.set_color(CL_GREEN);
+            }
+        }
+        std::cout << std::left << std::fixed;
+        if ((n==0)||(n==5)){
+            if (board[x][y].GetBehaviour()==1){ std::cout << "^^^^^^^^^^^";}
+            if (board[x][y].GetBehaviour()==2){ std::cout << "@@@@@@@@@@@";}
+            if (board[x][y].GetBehaviour()==3){ std::cout << "&&&&&&&&&&&";}
+            if (board[x][y].GetBehaviour()==4){ std::cout << "$$$$$$$$$$$";}
+            if (board[x][y].GetBehaviour()==5){ std::cout << "***********";}
+            if (board[x][y].GetBehaviour()==6){ std::cout << "!!!!!!!!!!!";}
+        }
+        if ((n==1)||(n==4)){
+            if (board[x][y].GetBehaviour()==1){ std::cout << "^^       ^^";}
+            if (board[x][y].GetBehaviour()==2){ std::cout << "@@       @@";}
+            if (board[x][y].GetBehaviour()==3){ std::cout << "&&       &&";}
+            if (board[x][y].GetBehaviour()==4){ std::cout << "$$       $$";}
+            if (board[x][y].GetBehaviour()==5){ std::cout << "**       **";}
+            if (board[x][y].GetBehaviour()==6){ std::cout << "!!       !!";}
+        }
+        if (n==2){
+            if (board[x][y].GetBehaviour()==1){ std::cout << "^^ H " << std::setw(4) << board[x][y].GetCurrentHealth() << "^^";}
+            if (board[x][y].GetBehaviour()==2){ std::cout << "@@ H " << std::setw(4) << board[x][y].GetCurrentHealth() << "@@";}
+            if (board[x][y].GetBehaviour()==3){ std::cout << "&& H " << std::setw(4) << board[x][y].GetCurrentHealth() << "&&";}
+            if (board[x][y].GetBehaviour()==4){ std::cout << "$$ H " << std::setw(4) << board[x][y].GetCurrentHealth() << "$$";}
+            if (board[x][y].GetBehaviour()==5){ std::cout << "^^ H " << std::setw(4) << board[x][y].GetCurrentHealth() << "^^";}
+            if (board[x][y].GetBehaviour()==6){ std::cout << "^^ H " << std::setw(4) << board[x][y].GetCurrentHealth() << "^^";}
+        }
+        if (n==3){
+            if (board[x][y].GetBehaviour()==1){ std::cout << "^^ D " << std::setw(4) << board[x][y].GetDamage() << "^^";}
+            if (board[x][y].GetBehaviour()==2){ std::cout << "@@ D " << std::setw(4) << board[x][y].GetDamage() << "@@";}
+            if (board[x][y].GetBehaviour()==3){ std::cout << "&& D " << std::setw(4) << board[x][y].GetDamage() << "&&";}
+            if (board[x][y].GetBehaviour()==4){ std::cout << "$$ D " << std::setw(4) << board[x][y].GetDamage() << "$$";}
+            if (board[x][y].GetBehaviour()==5){ std::cout << "** D " << std::setw(4) << board[x][y].GetDamage() << "**";}
+            if (board[x][y].GetBehaviour()==6){ std::cout << "!! D " << std::setw(4) << board[x][y].GetDamage() << "!!";}
+        }
+        std::cout << "\t";
+        color.clear();
+    }
+    else{
+        std::cout << "00000000000\t";
+    }
+}
+
+void board_output2(Cell** board, int nx, int ny, int x1, int y1){ // 1 вид вывода доски
+    for (int i =0; i<nx; i++){
+        for (int k =0; k<=ny; k++){
+            for (int j = 0; j<5; j++){
+                tileoutput(board, i, j, k, x1, y1);
+            }
+            std::cout << std::endl;
+        }
+        std::cout << std::endl;
+        if (i<nx-1){
+            std::cout << std::endl;
+        }
+    }
+}
+
 
 
 void gamemode1(int nx, int ny, int** type, int **hp);
@@ -20,13 +94,6 @@ int main()
     #else
     setlocale(LC_ALL, "Russian");
     #endif
-    Colors color;
-
-    color.set_color(CL_RED);
-    std::cout << "red\n";
-
-    color.set_color(CL_BLUE);
-    std::cout << "blue\n";
     int nx = 5;
     int ny = 5;
 
@@ -157,17 +224,24 @@ int main()
             turn = 0;
             
         }
-        std::cout<<"Сторона: "<< (side)%2+1 << "  Выбран Герой под номером " << turn << "  Счёт: " << kills_one << ":"  << kills_two << std::endl;
-        action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
+        if (side==1){
+            board_output2(board,nx,ny,x1[turn],y1[turn]); // На этом моменте обновлять доску
+            std::cout<<"Сторона: "<< (side)%2+1 << "  Выбран Герой под номером " << turn << "  Счёт: " << kills_one << ":"  << kills_two << std::endl;
+        }
+        else{
+            board_output2(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
+            std::cout<<"Сторона: "<< (side)%2+1 << "  Выбран Герой под номером " << turn << "  Счёт: " << kills_one << ":"  << kills_two << std::endl;
+        }
+        
         std::cin >> l;
         std::cout << std::endl << std::endl << std::endl << std::endl << std::endl << std::endl << std::endl;
         if (kills_one>=4){
-            action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
+            board_output2(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
             std::cout << "Победил игрок 1;  Уничтожено героев игроком 1: " << kills_one << " Уничтожено героев игроком 2: " << kills_two << std::endl;
             break;
         }
         if (kills_two>=4){
-            action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
+            board_output2(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
             std::cout << "Победил игрок 2;  Уничтожено героев игроком 1: " << kills_one << " Уничтожено героев игроком 2: " << kills_two << std::endl;
             break;
         }
