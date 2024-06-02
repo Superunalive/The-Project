@@ -12,9 +12,8 @@ set(${project}_SOURCES
 
 set(${project}_HEADERS
         heroes.h 
-        spells.h 
-        behaviour.h 
-        basic_actions.h)
+        basic_actions.h 
+        colors.h)
 
 set(${project}_SOURCE_LIST
         ${${project}_SOURCES}
