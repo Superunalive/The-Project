@@ -6,8 +6,6 @@
 #include "libraries/behaviour.h"
 #include "libraries/board.h"
 #include "libraries/colors.h"
-#include "libraries/basic_actions.cpp"
-#include "libraries/behaviour.cpp"
 
 Colors color;
 
