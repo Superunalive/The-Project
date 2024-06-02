@@ -6,7 +6,7 @@ project(${project})
 set(CMAKE_CXX_STANDARD 17)
 
 set(${project}_SOURCES
-        board.cpp)
+        v_board.cpp)
 
 set(${project}_HEADERS
         graphics.h)

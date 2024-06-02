@@ -3,7 +3,6 @@
 #include <vector>
 #include <iomanip>
 #include "libraries/basic_actions.h"
-#include "libraries/behaviour.h"
 #include "libraries/board.h"
 #include "libraries/colors.h"
 
