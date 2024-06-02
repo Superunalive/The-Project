@@ -2,8 +2,7 @@
 #include <limits>
 #include <vector>
 #include <iomanip>
-#include "libraries/basic_actions.h"
-#include "libraries/board.h"
+#include "libraries/basic_actions/basic_actions.h"
 #include "libraries/colors.h"
 
 Colors color;

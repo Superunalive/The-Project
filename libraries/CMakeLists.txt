@@ -6,13 +6,12 @@ project(${project})
 set(CMAKE_CXX_STANDARD 17)
 
 set(${project}_SOURCES
-        heroes.cpp 
-        behaviour.cpp
-        basic_actions.cpp)
+        heroes/heroes.cpp 
+        basic_actions/basic_actions.cpp)
 
 set(${project}_HEADERS
-        heroes.h 
-        basic_actions.h 
+        heroes/heroes.h 
+        basic_actions/basic_actions.h 
         colors.h)
 
 set(${project}_SOURCE_LIST
