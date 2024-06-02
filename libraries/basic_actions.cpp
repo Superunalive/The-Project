@@ -197,8 +197,36 @@ void step_pos(int& x1, int& y1, Cell** board, int nx, int ny, char l){
     }
 }
 
+void pierce_damage(int x, int y, Cell** board, int nx,int ny,char l){
+    int x1 = x;
+    int y1 = y;
+    if (l=='w'){
+        while ((x1>0)&&((board[x1-1][y1].side!=board[x][y].side))){
+            x1--;
+            board[x1][y1].SetCurrentHealth(board[x1][y1].GetCurrentHealth()-1);
+        }
+    }
+    if (l=='a'){
+        while ((y1>0)&&((board[x1][y1-1].side!=board[x][y].side))){
+            y1--;
+            board[x1][y1].SetCurrentHealth(board[x1][y1].GetCurrentHealth()-1);
+        }
+    }
+    if (l=='s'){
+        while ((x1<(nx-1))&&((board[x1+1][y1].side!=board[x][y].side))){
+            x1++;
+            board[x1][y1].SetCurrentHealth(board[x1][y1].GetCurrentHealth()-1);
+        }
+    }
+    if (l=='d'){
+        while ((y1<(ny-1))&&((board[x1][y1+1].side!=board[x][y].side))){
+            y1++;
+            board[x1][y1].SetCurrentHealth(board[x1][y1].GetCurrentHealth()-1);
+        }
+    }
+}
+
 void change_pos(int& x, int& y, int x1, int y1, Cell** board){
-    // пока нет присваивания не работает
     Cell p = board[x1][y1];
     board[x1][y1] = board[x][y];
     board[x][y] = p;
@@ -222,6 +250,29 @@ void counter_attack(int x, int y, Cell** board, int nx, int ny, char l){
     }
 }
 
+void evasion_pos(int& x, int& y, Cell** board, int nx, int ny, char l){
+    if ((l=='w')||(l=='s')){
+        if ((y>0)&&(board[x][y+1].IsBusy==0)){
+            y--;
+        }
+        else{
+            if ((y<(ny-1))&&(board[x][y-1].IsBusy==0)){
+                y++;
+            }
+        }
+    }
+    if ((l=='a')||(l=='d')){
+        if ((x>0)&&(board[x][y+1].IsBusy==true)){
+            x--;
+        }
+        else{
+            if ((x<(nx-1))&&((board[x][y+1].IsBusy==0))){
+                x++;
+            }
+        }
+    }
+}
+
 void death_check(Cell** board, int nx, int ny, int& kills_one, int& kills_two, std::vector<int>& x1,std::vector<int>& y1,std::vector<int>& x2,std::vector<int>& y2){
     for (int i = 0; i<nx; i++){
         for (int j = 0; j<ny; j++){
@@ -229,18 +280,18 @@ void death_check(Cell** board, int nx, int ny, int& kills_one, int& kills_two, s
                 if (board[i][j].side==1){
                     kills_one+=1;
                     for (int k = 0; k < x1.size(); k++){
-                        if ((x1[i]==i)&&(y1[i]==j)){
-                            x1.erase(x1.begin()+i);
-                            y1.erase(y1.begin()+i);
+                        if ((x1[k]==i)&&(y1[k]==j)){
+                            x1.erase(x1.begin()+k);
+                            y1.erase(y1.begin()+k);
                         }
                     }
                 }
                 else{
                     kills_two+=1;
                     for (int k = 0; k < x2.size(); k++){
-                        if ((x2[i]==i)&&(y2[i]==j)){
-                            x2.erase(x2.begin()+i);
-                            y2.erase(y2.begin()+i);
+                        if ((x2[k]==i)&&(y2[k]==j)){
+                            x2.erase(x2.begin()+k);
+                            y2.erase(y2.begin()+k);
                         }
                     }
                 }
@@ -253,6 +304,7 @@ void death_check(Cell** board, int nx, int ny, int& kills_one, int& kills_two, s
 }
 
 void board_output(Cell** board, int nx, int ny, int x1, int y1){ // 1 вид вывода доски
+    std::cout << "Стороны         Здоровье        Урон            Поведение" << std::endl;
     for (int i =0; i<nx; i++){
         for (int j = 0; j<5; j++){
             std::cout << board[i][j].side << " ";
@@ -260,6 +312,14 @@ void board_output(Cell** board, int nx, int ny, int x1, int y1){ // 1 вид в�
         std::cout << "\t";
         for (int j =0; j<ny; j++){
             std::cout << board[i][j].GetCurrentHealth() << " ";
+        }
+        std::cout << "\t";
+        for (int j =0; j<ny; j++){
+            std::cout << board[i][j].GetDamage() << " ";
+        }
+        std::cout << "\t";
+        for (int j =0; j<ny; j++){
+            std::cout << board[i][j].GetBehaviour() << " ";
         }
         std::cout << std::endl;
     }

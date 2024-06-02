@@ -1,14 +1,105 @@
 #include <iostream>
 #include <limits>
 #include <vector>
+#include <iomanip>
 #include "libraries/basic_actions.h"
 #include "libraries/behaviour.h"
 #include "libraries/board.h"
-
-
+#include "libraries/colors.h"
 #include "libraries/basic_actions.cpp"
 #include "libraries/behaviour.cpp"
 
+Colors color;
+
+void tileoutput(Cell** board, int x, int y, int n, int x1, int y1){ // n - строки от 0 до 5
+    if (board[x][y].IsBusy){
+        if (board[x][y].side==2){
+            color.set_color(CL_RED);
+            if ((x==x1)&&(y==y1)){
+                color.set_color(CL_YELLOW);
+            }
+        }
+        else{
+            color.set_color(CL_BLUE);
+            if ((x==x1)&&(y==y1)){
+                color.set_color(CL_GREEN);
+            }
+        }
+        std::cout << std::left << std::fixed;
+        if ((n==0)||(n==5)){
+            if (board[x][y].GetBehaviour()==1){ std::cout << "^^^^^^^^^^^";}
+            if (board[x][y].GetBehaviour()==2){ std::cout << "@@@@@@@@@@@";}
+            if (board[x][y].GetBehaviour()==3){ std::cout << "&&&&&&&&&&&";}
+            if (board[x][y].GetBehaviour()==4){ std::cout << "$$$$$$$$$$$";}
+            if (board[x][y].GetBehaviour()==5){ std::cout << "***********";}
+            if (board[x][y].GetBehaviour()==6){ std::cout << "!!!!!!!!!!!";}
+        }
+        if ((n==1)||(n==4)){
+            if (board[x][y].GetBehaviour()==1){ std::cout << "^^       ^^";}
+            if (board[x][y].GetBehaviour()==2){ std::cout << "@@       @@";}
+            if (board[x][y].GetBehaviour()==3){ std::cout << "&&       &&";}
+            if (board[x][y].GetBehaviour()==4){ std::cout << "$$       $$";}
+            if (board[x][y].GetBehaviour()==5){ std::cout << "**       **";}
+            if (board[x][y].GetBehaviour()==6){ std::cout << "!!       !!";}
+        }
+        if (n==2){
+            if (board[x][y].GetBehaviour()==1){ std::cout << "^^ H " << std::setw(4) << board[x][y].GetCurrentHealth() << "^^";}
+            if (board[x][y].GetBehaviour()==2){ std::cout << "@@ H " << std::setw(4) << board[x][y].GetCurrentHealth() << "@@";}
+            if (board[x][y].GetBehaviour()==3){ std::cout << "&& H " << std::setw(4) << board[x][y].GetCurrentHealth() << "&&";}
+            if (board[x][y].GetBehaviour()==4){ std::cout << "$$ H " << std::setw(4) << board[x][y].GetCurrentHealth() << "$$";}
+            if (board[x][y].GetBehaviour()==5){ std::cout << "^^ H " << std::setw(4) << board[x][y].GetCurrentHealth() << "^^";}
+            if (board[x][y].GetBehaviour()==6){ std::cout << "^^ H " << std::setw(4) << board[x][y].GetCurrentHealth() << "^^";}
+        }
+        if (n==3){
+            if (board[x][y].GetBehaviour()==1){ std::cout << "^^ D " << std::setw(4) << board[x][y].GetDamage() << "^^";}
+            if (board[x][y].GetBehaviour()==2){ std::cout << "@@ D " << std::setw(4) << board[x][y].GetDamage() << "@@";}
+            if (board[x][y].GetBehaviour()==3){ std::cout << "&& D " << std::setw(4) << board[x][y].GetDamage() << "&&";}
+            if (board[x][y].GetBehaviour()==4){ std::cout << "$$ D " << std::setw(4) << board[x][y].GetDamage() << "$$";}
+            if (board[x][y].GetBehaviour()==5){ std::cout << "** D " << std::setw(4) << board[x][y].GetDamage() << "**";}
+            if (board[x][y].GetBehaviour()==6){ std::cout << "!! D " << std::setw(4) << board[x][y].GetDamage() << "!!";}
+        }
+        std::cout << "\t";
+        color.clear();
+    }
+    else{
+        std::cout << "00000000000\t";
+    }
+}
+
+void board_output2(Cell** board, int nx, int ny, int x1, int y1){ // 1 вид вывода доски
+    for (int i =0; i<nx; i++){
+        for (int k =0; k<=ny; k++){
+            for (int j = 0; j<5; j++){
+                tileoutput(board, i, j, k, x1, y1);
+            }
+            std::cout << std::endl;
+        }
+        std::cout << std::endl;
+        if (i<nx-1){
+            std::cout << std::endl;
+        }
+    }
+}
+
+void findchar(Cell** board, int nx, int ny, std::vector<int>& x1, std::vector<int>& y1, std::vector<int>& x2, std::vector<int>& y2){
+    x1.clear();
+    x2.clear();
+    y1.clear();
+    y2.clear();
+    for (int i =0; i<nx; i++){
+        for(int j = 0; j<ny;j++){
+            if (board[i][j].side==1){
+                x1.push_back(i);
+                y1.push_back(j);
+            }
+            if (board[i][j].side==2){
+                x2.push_back(i);
+                y2.push_back(j);
+            }
+        }
+    }
+
+}
 
 void gamemode1(int nx, int ny, int** type, int **hp);
 
@@ -25,43 +116,43 @@ int main()
     int ny = 5;
 
     Hero Proto1; 
-    Proto1.SetBehaviour(1);
-    Proto1.SetMaxHealth(9);
+    Proto1.SetBehaviour(3);
+    Proto1.SetMaxHealth(56);
     Proto1.SetCurrentHealth(Proto1.GetMaxHealth());
-    Proto1.SetDamage(3);
+    Proto1.SetDamage(5);
     Hero Proto2; 
-    Proto2.SetBehaviour(1);
-    Proto2.SetMaxHealth(9);
+    Proto2.SetBehaviour(3);
+    Proto2.SetMaxHealth(67);
     Proto2.SetCurrentHealth(Proto2.GetMaxHealth());
-    Proto2.SetDamage(3);
+    Proto2.SetDamage(1);
     Hero Proto3; 
     Proto3.SetBehaviour(1);
-    Proto3.SetMaxHealth(9);
+    Proto3.SetMaxHealth(19);
     Proto3.SetCurrentHealth(Proto3.GetMaxHealth());
-    Proto3.SetDamage(3);
+    Proto3.SetDamage(2);
     Hero Proto4; 
     Proto4.SetBehaviour(1);
-    Proto4.SetMaxHealth(9);
+    Proto4.SetMaxHealth(39);
     Proto4.SetCurrentHealth(Proto4.GetMaxHealth());
     Proto4.SetDamage(3);
     Hero Anto1; 
-    Anto1.SetBehaviour(1);
-    Anto1.SetMaxHealth(9);
+    Anto1.SetBehaviour(5);
+    Anto1.SetMaxHealth(5);
     Anto1.SetCurrentHealth(Anto1.GetMaxHealth());
-    Anto1.SetDamage(3);
+    Anto1.SetDamage(4);
     Hero Anto2; 
-    Anto2.SetBehaviour(1);
-    Anto2.SetMaxHealth(9);
+    Anto2.SetBehaviour(5);
+    Anto2.SetMaxHealth(6);
     Anto2.SetCurrentHealth(Anto2.GetMaxHealth());
     Anto2.SetDamage(3);
     Hero Anto3; 
-    Anto3.SetBehaviour(1);
-    Anto3.SetMaxHealth(9);
+    Anto3.SetBehaviour(5);
+    Anto3.SetMaxHealth(7);
     Anto3.SetCurrentHealth(Anto3.GetMaxHealth());
-    Anto3.SetDamage(3);
+    Anto3.SetDamage(2);
     Hero Anto4; 
     Anto4.SetBehaviour(1);
-    Anto4.SetMaxHealth(9);
+    Anto4.SetMaxHealth(8);
     Anto4.SetCurrentHealth(Anto4.GetMaxHealth());
     Anto4.SetDamage(3);
     
@@ -87,8 +178,6 @@ int main()
     std::vector<int> x2 = {};
     std::vector<int> y1 = {};
     std::vector<int> y2 = {};
-    int* x = new int[8] {2,2,3,4,1,0,3,2};
-    int* y = new int[8] {3,4,1,2,1,4,0,0};
     action::hero_spawn(board, nx, ny, lol1 , 1, x1, y1);
     action::hero_spawn(board, nx, ny, lol2 , 2, x2, y2);
     action::hero_spawn(board, nx, ny, lol3 , 1, x1, y1);
@@ -124,45 +213,58 @@ int main()
     int side = 2;
     char l = 'h';
     while (l!='q'){
-        std::cout << x1.size();
-        std:: cout << "Номера героев:   ";
-        for (int i = 0; i<x1.size(); i+=1){
-            std::cout << i << ")" << x1[i] << " " << y1[i] << "  ";
-        }
-        for (int i = 0; i<x2.size(); i+=1){
-            std::cout << i << ")" << x2[i] << " " << y2[i] << "  ";
-        }
         std::cout << std::endl;
         if ((l=='0')||(l=='1')||(l=='2')||(l=='3')){
             turn = (int)l-48;
         }
         else{
             if (side==1){
-                action::behaviour(x1[turn], y1[turn], board, nx, ny,l);
+                action::behaviour(x1[turn], y1[turn], board, nx, ny,l,kills_one,kills_two,x1,y1,x2,y2);
                 action::death_check(board,nx,ny,kills_one,kills_two,x1,y1,x2,y2);
-                //action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
-                side = 2;
+                x1.erase(x1.begin()+turn);
+                y1.erase(y1.begin()+turn);
+                if (x1.size()==0){
+                    side = 2;
+                    findchar(board,nx,ny,x1,y1,x2,y2);
+                }
             }
             else {
-                action::behaviour(x2[turn], y2[turn], board, nx, ny,l);
+                action::behaviour(x2[turn],y2[turn], board, nx, ny,l,kills_one,kills_two,x1,y1,x2,y2);
                 action::death_check(board,nx,ny,kills_one,kills_two,x1,y1,x2,y2);
-                //action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
-
-                side = 1;
+                x2.erase(x2.begin()+turn);
+                y2.erase(y2.begin()+turn);
+                if (x2.size()==0){
+                    side = 1;
+                    findchar(board,nx,ny,x1,y1,x2,y2);
+                }
             }
             turn = 0;
-            
         }
-        std::cout<<"Сторона: "<< side << "  Выбран Герой под номером " << turn << "   " << kills_one << ":"  << kills_two << std::endl;
-        action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
+        if (side==1){
+            board_output2(board,nx,ny,x1[turn],y1[turn]); // На этом моменте обновлять доску
+            std:: cout << "Номера героев:   ";
+            for (int i = 0; i<x1.size(); i+=1){
+                std::cout << i << ")" << x1[i] << " " << y1[i] << "  ";
+            }
+            std::cout<<"Сторона: "<< 1 << "  Выбран Герой под номером " << turn << "  Счёт: " << kills_one << ":"  << kills_two << std::endl;
+        }
+        else{
+            board_output2(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
+            std:: cout << "Номера героев:   ";
+            for (int i = 0; i<x2.size(); i+=1){
+                std::cout << i << ")" << x2[i] << " " << y2[i] << "  ";
+            }
+            std::cout<<"Сторона: "<< 2 << "  Выбран Герой под номером " << turn << "  Счёт: " << kills_one << ":"  << kills_two << std::endl;
+        }
         std::cin >> l;
+        std::cout << std::endl << std::endl << std::endl << std::endl << std::endl << std::endl << std::endl;
         if (kills_one>=4){
-            action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
+            board_output2(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
             std::cout << "Победил игрок 1;  Уничтожено героев игроком 1: " << kills_one << " Уничтожено героев игроком 2: " << kills_two << std::endl;
             break;
         }
         if (kills_two>=4){
-            action::board_output(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
+            board_output2(board,nx,ny,x2[turn],y2[turn]); // На этом моменте обновлять доску
             std::cout << "Победил игрок 2;  Уничтожено героев игроком 1: " << kills_one << " Уничтожено героев игроком 2: " << kills_two << std::endl;
             break;
         }

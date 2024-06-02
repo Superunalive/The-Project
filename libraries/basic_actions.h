@@ -39,7 +39,7 @@ void damage(int, int, Cell**, int, int, char, double); // нанесение у�
 
 void step_pos(int&, int&, Cell**, int, int, char); // выбор места для перемещения
 
-void evasion_pos(int& x1, int& y1, Cell**, int nx, int ny, char l, int turn);
+void evasion_pos(int& x1, int& y1, Cell**, int nx, int ny, char l);
 
 void change_pos(int&, int&, int, int, Cell**); // два объекта меняются местами
 
@@ -51,6 +51,7 @@ void board_output(Cell**, int, int, int, int); // 1 вид вывода доск
 
 void hero_spawn(Cell** board, int nx, int ny, Hero* hero, int side, std::vector<int>& x, std::vector<int>& y); // добавление героя на нужное место строки
 
+void pierce_damage(int x1, int y1, Cell** board, int nx,int ny,char l);
 }
 
 #endif // BASIC_ACTIONS_H
